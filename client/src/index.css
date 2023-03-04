@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Lato:wght@300;400;900&display=swap');
+@layer base {
+  html,
+  body {
+    font-family: 'Lato', sans-serif;
+  }
+  .logo {
+    font-family: 'Comfortaa', cursive;
+  }
+}
+@layer components {
+}

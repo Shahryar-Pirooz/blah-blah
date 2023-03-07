@@ -5,6 +5,7 @@
 @layer base {
     html,
     body {
+        transition: all 0.5;
         font-family: 'Lato', sans-serif;
     }
 }
@@ -16,9 +17,21 @@
         @apply h-screen w-screen;
     }
     .login-bg {
-        @apply full-screen grid grid-cols-3 place-items-center  bg-black;
+        @apply full-screen place-items-center bg-black md:grid  md:grid-cols-3;
     }
     .login-card {
-        @apply col-start-2 flex h-5/6 w-full flex-col justify-start rounded-lg bg-white;
+        @apply col-start-2 flex h-full w-full flex-col justify-start bg-white md:h-5/6 md:rounded-lg;
+    }
+    .input {
+        @apply mx-auto h-8 w-full rounded-md border border-gray bg-white text-center outline-none transition-all duration-500 hover:shadow-md focus:border-primary  active:shadow-none active:duration-75;
+    }
+    .link {
+        @apply cursor-pointer text-center font-bold text-primary hover:text-secondary;
+    }
+    .btn {
+        @apply mx-auto rounded-lg  py-2 px-2 font-bold transition-all duration-200 hover:shadow-lg active:shadow-inner active:shadow-black active:duration-75;
+    }
+    .btn-primary {
+        @apply bg-primary text-white;
     }
 }

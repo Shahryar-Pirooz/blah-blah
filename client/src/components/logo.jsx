@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-export function Logo({ className }) {
+export default function Logo({ className }) {
     return (
         <div className={`logo ${className}`}>
             <Link to="/">

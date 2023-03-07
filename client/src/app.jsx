@@ -4,13 +4,19 @@ export default function App() {
         <>
             <ul className="space-x-10 text-primary">
                 <ui>
-                    <Link to="/login">SignUp/LogIn</Link>
+                    <Link to="/login" className="link">
+                        SignUp/LogIn
+                    </Link>
                 </ui>
                 <ui>
-                    <Link to="/">link2</Link>
+                    <Link to="/" className="link">
+                        link2
+                    </Link>
                 </ui>
                 <ui>
-                    <Link to="/">link3</Link>
+                    <Link to="/" className="link">
+                        link3
+                    </Link>
                 </ui>
             </ul>
         </>

@@ -1,3 +1,4 @@
-import { Logo } from './logo'
+import Logo from './logo'
+import Message from './message'
 
-export { Logo }
+export { Logo, Message }

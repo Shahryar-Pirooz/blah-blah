@@ -1,10 +1,10 @@
 import express from 'express'
 import * as dotenv from 'dotenv'
 dotenv.config()
-import connectDB from './db/connection.js'
+import connectDB from './db/connection.db.js'
 
 //middleware
-import notFoundMiddleware from './middleware/not-found.js'
+import notFoundMiddleware from './middleware/not-found.middleware.js'
 
 const app = express()
 const port = process.env.PORT || 3000

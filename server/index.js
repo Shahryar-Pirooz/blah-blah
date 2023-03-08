@@ -6,7 +6,7 @@ dotenv.config()
 import connectDB from './db/connection.db.js'
 
 //
-import authRouter from './routes/auth.route.js'
+import authRouter from './routes/auth.routes.js'
 
 //middleware
 import notFoundMiddleware from './middleware/not-found.middleware.js'

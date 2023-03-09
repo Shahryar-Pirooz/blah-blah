@@ -5,8 +5,9 @@ dotenv.config()
 //db
 import connectDB from './db/connection.db.js'
 
-//
+// routers
 import authRouter from './routes/auth.routes.js'
+import postRouter from './routes/post.routes.js'
 
 //middleware
 import notFoundMiddleware from './middleware/not-found.middleware.js'
@@ -18,7 +19,10 @@ app.use(express.json())
 app.get('/', (req, res) => {
     res.status(200).json({})
 })
+
 app.use('/api/v1/auth', authRouter)
+app.use('/api/v1/auth', postRouter)
+
 app.use('*', notFoundMiddleware)
 const start = async () => {
     try {

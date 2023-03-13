@@ -1,9 +1,9 @@
 import express from 'express'
 import * as dotenv from 'dotenv'
 dotenv.config()
-//TODO: uncomment DB
+
 //db
-// import connectDB from './db/connection.db.js'
+import connectDB from './db/connection.db.js'
 
 // routers
 import authRouter from './routes/auth.routes.js'
@@ -26,7 +26,7 @@ app.use('/api/v1/post', postRouter)
 app.use('*', notFoundMiddleware)
 const start = async () => {
     try {
-        //await connectDB(process.env.DB_URL)
+        await connectDB(process.env.DB_URL)
         app.listen(port, () => {
             console.log(`server is listening on ${port} `)
         })

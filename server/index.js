@@ -1,9 +1,9 @@
 import express from 'express'
 import * as dotenv from 'dotenv'
 dotenv.config()
-
+//TODO: uncomment DB
 //db
-import connectDB from './db/connection.db.js'
+// import connectDB from './db/connection.db.js'
 
 // routers
 import authRouter from './routes/auth.routes.js'

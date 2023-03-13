@@ -3,15 +3,40 @@ import mongoose from 'mongoose'
 const postSchema = mongoose.Schema({
     title: {
         type: String,
-        maxlength: 100,
-        required: [true, 'Please provide title'],
+        required: true,
     },
-    thumbnailImage: String,
-    context: String,
-    date: {
+    author: {
+        type: String,
+        required: true,
+    },
+    content: {
+        type: String,
+        required: true,
+    },
+    tags: {
+        type: [String],
+        required: true,
+    },
+    datePosted: {
         type: Date,
         default: Date.now,
     },
+    comments: [
+        {
+            name: {
+                type: String,
+                required: true,
+            },
+            email: {
+                type: String,
+                required: true,
+            },
+            message: {
+                type: String,
+                required: true,
+            },
+        },
+    ],
 })
 
 export default mongoose.Model('Post', postSchema)
